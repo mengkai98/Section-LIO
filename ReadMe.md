@@ -20,7 +20,7 @@ mkdir -p catkin_ws/src
 cd catkin_ws/src
 
 # Clone the code
-git clone git@github.com:mengkai98/Section-LIO.git
+git clone https://github.com/mengkai98/Section-LIO.git
 
 # Use catkin_make to build the package
 cd ..
