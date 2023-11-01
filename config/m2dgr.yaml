@@ -1,0 +1,25 @@
+wrapper:
+  config_file: m2dgr.yaml
+  lidar_topic: /velodyne_points
+  imu_topic: /handsfree/imu
+  lidar_type: 5
+  
+sectional_lio:
+  filter_leaf_size: 0.5
+  extrin_r: [1,0,0,
+            0,1,0,
+            0,0,1]
+  extrin_t: [-0.27255, 0.00053,-0.17954]
+  section_min_map_size: 30000
+eskf:
+  cov_gyroscope: 0.15
+  cov_acceleration: 0.15
+  cov_bias_acceleration: 0.0001
+  cov_bias_gyroscope: 0.0001
+
+section_process:
+  max_sections: 3
+  planaer_threhold: 0.1
+  section_min_point_size: 1250
+  feature_normal_thre: 30
+  feature_dis_thre: 1 

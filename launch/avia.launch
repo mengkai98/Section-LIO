@@ -1,0 +1,12 @@
+<launch>
+
+
+
+    <rosparam command="load" file="$(find slam_craft_turbo)/config/avia.yaml" />
+    <node pkg="slam_craft_turbo" type="slio_node" name="slio_running_node" output="screen" /> 
+
+
+	<node  pkg="rviz" type="rviz" name="rviz" args="-d $(find slam_craft_turbo)/rviz/lio.rviz" /> 
+
+
+</launch>
